@@ -1,0 +1,70 @@
+﻿<div layout-gt-sm="row" layout="column">
+    <div flex="45" style="margin-bottom:10px;">
+        <form name="SNSForms.frmOffers">
+
+            <md-toolbar class="md-primary">
+                <div class="md-toolbar-tools">
+                    <h3 class="md-flex">Tutoring I'm offering</h3>
+                    <span flex></span>
+                    <md-button class="md-fab md-mini md-hue-2" aria-label="save Changes" ng-show="SNSForms.frmOffers.$dirty" ng-click="saveChanges()">
+                        <md-icon md-font-set="material-icons">save</md-icon>
+                    </md-button>
+                    <md-button class="md-fab md-mini md-hue-2" aria-label="Add Offering" ng-click="addOffer()">
+                        <md-icon md-font-set="material-icons">add</md-icon>
+                    </md-button>
+                </div>
+            </md-toolbar>
+            <md-content flex layout-padding  style="max-height:600px;overflow:auto;">
+
+                <md-list>
+                    <md-list-item class="md-2-line" ng-repeat="item in appData.Subjects | filter:offered" >
+                        <md-checkbox ng-model="item.Offered"></md-checkbox>
+                        <div class="md-list-item-text" style="text-overflow: ellipsis;">
+                            <h3>{{item.SubjectName}}</h3>
+                        </div>
+                        <md-button ng-show="item.OffersMatches.length>0" hide-xs class="md-raised md-warn md-secondary" ng-click="showMatch(item,1)">
+                            {{item.OffersMatches.length}} Request<span ng-show="item.OffersMatches.length>1">s</span>
+                        </md-button>
+                    </md-list-item>
+                </md-list>
+
+            </md-content>
+        </form>
+    </div>
+    <div flex></div>
+    <div flex="45" style="margin-bottom:10px;">
+        <form name="SNSForms.frmRequests">
+            <md-toolbar class="md-accent md-hue-4">
+                <div class="md-toolbar-tools">
+                    <h3 class="md-flex">Tutoring I'm requesting</h3>
+                    <span flex></span>
+
+                    <md-button class="md-fab md-mini md-primary md-hue-2" aria-label="save Changes" ng-show="SNSForms.frmRequests.$dirty" ng-click="saveChanges()">
+                        <md-icon md-font-set="material-icons">save</md-icon>
+                    </md-button>
+                    <md-button class="md-fab md-mini md-primary md-hue-2" aria-label="refresh matches" ng-click="refreshMatches()">
+                        <md-icon md-font-set="material-icons">autorenew</md-icon>
+                    </md-button>
+                    <md-button class="md-fab md-mini md-primary md-hue-2" aria-label="Add Request" ng-click="addRequest();">
+                        <md-icon md-font-set="material-icons">add</md-icon>
+                    </md-button>
+                </div>
+            </md-toolbar>
+            <md-content flex layout-padding style="max-height:600px;overflow:auto;">
+
+                <md-list>
+                    <md-list-item class="md-2-line"  ng-repeat="item in appData.Subjects | filter:requested">
+                        <md-checkbox ng-model="item.Requested"></md-checkbox>
+                        <div class="md-list-item-text" style="text-overflow: ellipsis;">
+                            <h3>{{item.SubjectName}}</h3>
+                        </div>
+                        <md-button ng-show="item.RequestMatches.length>0" hide-xs class="md-raised md-warn md-secondary" ng-click="showMatch(item,2)" >
+                            {{item.RequestMatches.length}} Offer<span ng-show="item.RequestMatches.length>1">s</span>
+                        </md-button>
+                    </md-list-item>
+                </md-list>
+
+            </md-content>
+        </form>
+    </div>
+</div>

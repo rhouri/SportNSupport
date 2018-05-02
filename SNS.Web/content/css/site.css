@@ -1,0 +1,298 @@
+﻿@import url('https://themes.googleusercontent.com/fonts/css?kit=sDU-RIIs3Wq_4pUcDwWu-05zdwzqyXAFhQ3EpAK6bTA');
+
+body {
+   background-color: white;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+/*Main Styles*/
+
+@media (min-width:480px) {
+   /****************/
+
+   .OnlyforHandheld {
+      display: none;
+   }
+
+   .OnlyforWeb {
+      display: block;
+   }
+
+   /****************/
+}
+
+@media (max-width:480px) {
+   /****************/
+
+   .OnlyforHandheld {
+      display: block;
+   }
+
+   .OnlyforWeb {
+      display: none;
+   }
+
+   /****************/
+}
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+   position: relative;
+   min-height: 100%;
+}
+
+
+
+
+#footer {
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   /* Set the fixed height of the footer here */
+   height: 60px;
+   background-color: #f5f5f5;
+}
+
+.text-muted {
+   margin: 20px 0;
+}
+
+.form-login {
+   max-width: 330px;
+   padding: 0px 15px 5px 15px;
+   margin: 0 auto;
+}
+
+   .form-login .form-login-heading {
+      margin-bottom: 10px;
+   }
+
+   .form-login .form-control {
+      position: relative;
+      height: auto;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 10px;
+      font-size: 16px;
+   }
+
+      .form-login .form-control:focus {
+         z-index: 2;
+      }
+
+   .form-login input[type="Password"] {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+   }
+
+/* AngularJS Form validation styling */
+.validation.help-block {
+   color: #E07676;
+   font-style: italic;
+}
+
+/* invalid & dirty => red */
+input.ng-invalid.ng-dirty:not(:focus),
+select.ng-invalid.ng-dirty:not(:focus),
+textarea.ng-invalid.ng-dirty:not(:focus) {
+   border-color: #e74c3c;
+}
+
+/* invalid & pristine => maroon */
+input.ng-invalid:not(:focus),
+select.ng-invalid:not(:focus),
+textarea.ng-invalid:not(:focus) {
+   border-left: double #a97a09;
+}
+
+
+
+
+
+/* valid & dirty => green */
+input.ng-valid.ng-dirty,
+select.ng-valid.ng-dirty,
+textarea.ng-valid.ng-dirty {
+   border-color: #2ecc71;
+}
+
+/* error display font italic, text-danger is red in BS */
+.validation.text-danger {
+   font-style: italic;
+}
+
+
+.btsm-ico .fa {
+   line-height: 1.5;
+}
+
+
+
+
+/* -- Background Helper Classes */
+
+/* Use these to cuztomize the background color of a div. These are used along with tiles, or any other div you want to customize. */
+
+.dark-blue {
+   background-color: #34495e;
+}
+
+
+.cyan {
+   background-color: cyan;
+}
+
+
+.light-green {
+   background-color: lightseagreen;
+}
+
+.green {
+   background-color: #16a085;
+}
+
+.blue {
+   background-color: #2980b9;
+}
+
+.orange {
+   background-color: #f39c12;
+}
+
+.red {
+   background-color: #e74c3c;
+}
+
+.reddish {
+   background-color: #FFf0f0;
+}
+
+
+.purple {
+   background-color: #8e44ad;
+}
+
+.dark-gray {
+   background-color: #7f8c8d;
+}
+
+.gray {
+   background-color: #95a5a6;
+}
+
+.light-gray {
+   background-color: #bdc3c7;
+}
+
+.yellow {
+   background-color: #f1c40f;
+}
+
+/* -- Text Color Helper Classes */
+.text-black {
+   color: black;
+}
+
+
+.text-yellow {
+   color: #ffff00;
+}
+
+.text-dark-blue {
+   color: #34495e;
+}
+
+.text-green {
+   color: #16a085;
+}
+
+.text-blue {
+   color: #2980b9;
+}
+
+.text-orange {
+   color: #f39c12;
+}
+
+.text-red {
+   color: #e74c3c;
+}
+
+.text-purple {
+   color: #8e44ad;
+}
+
+.text-white {
+   color: white;
+}
+
+.text-grey {
+   color: gray;
+}
+
+.text-lightsteelblue {
+   color: lightsteelblue;
+}
+
+
+.text-faded {
+   color: rgba(255,255,255,0.7);
+}
+
+
+.text-left {
+   text-align: left;
+}
+
+.text-right {
+   text-align: right;
+}
+
+.text-center {
+   text-align: center;
+}
+
+
+
+
+
+md-list-item-text h3 {
+   text-overflow: ellipsis;
+}
+
+md-list {
+   padding: 0 !important;
+}
+
+md-card md-card-title {
+   padding: 6px 16px 6px 16px !important;
+}
+
+
+md-list-item {
+   padding: 0;
+   padding-top: 0px;
+   padding-right: 8px;
+   padding-bottom: 0px;
+   padding-left: 8px;
+   max-height: 18px !important;
+}
+
+md-list.md-dense md-list-item .md-list-item-inner:before, md-list.md-dense md-list-item:before {
+   max-height: 18px !important;
+}
+
+md-list-item .md-list-item-inner:before, md-list-item:before {
+   max-height: 18px !important;
+}
+md-content h2 {
+   margin: 0 !important;
+}

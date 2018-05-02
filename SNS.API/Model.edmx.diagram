@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="874e8f2302c947ca9f866ac16dab9a46" Name="Diagram1">
+        <EntityTypeShape EntityType="AthleteTutorsDBModel.AspNetUser" Width="1.5" PointX="13" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AthleteTutorsDBModel.Contact" Width="1.5" PointX="1.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AthleteTutorsDBModel.School" Width="1.5" PointX="0.5" PointY="1.625" IsExpanded="true" />
+        <AssociationConnector Association="AthleteTutorsDBModel.FK_Schools_Contacts" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AthleteTutorsDBModel.Student" Width="3.75" PointX="7.5" PointY="2" />
+        <AssociationConnector Association="AthleteTutorsDBModel.FK_Students_Contacts" />
+        <AssociationConnector Association="AthleteTutorsDBModel.FK_Students_AspNetUsers" />
+        <EntityTypeShape EntityType="AthleteTutorsDBModel.SubjectCategory" Width="1.5" PointX="6.5" PointY="8.375" />
+        <EntityTypeShape EntityType="AthleteTutorsDBModel.StudentOffer" Width="1.5" PointX="9.625" PointY="5.25" />
+        <EntityTypeShape EntityType="AthleteTutorsDBModel.StudentRequest" Width="1.5" PointX="7.75" PointY="5.25" />
+        <EntityTypeShape EntityType="AthleteTutorsDBModel.StudentTeam" Width="1.5" PointX="5" PointY="2" />
+        <EntityTypeShape EntityType="AthleteTutorsDBModel.Subject" Width="1.5" PointX="8.75" PointY="7.875" />
+        <EntityTypeShape EntityType="AthleteTutorsDBModel.Team" Width="1.5" PointX="2.75" PointY="1.75" />
+        <AssociationConnector Association="AthleteTutorsDBModel.FK_Teams_Schools" />
+        <AssociationConnector Association="AthleteTutorsDBModel.FK_SO_Students" />
+        <AssociationConnector Association="AthleteTutorsDBModel.FK_SO_Subjects" />
+        <AssociationConnector Association="AthleteTutorsDBModel.FK_SR_Students" />
+        <AssociationConnector Association="AthleteTutorsDBModel.FK_SR_Subjects" />
+        <AssociationConnector Association="AthleteTutorsDBModel.FK_Subjects_SubjectCategories" />
+        <AssociationConnector Association="AthleteTutorsDBModel.FK_StudentTeams_Students" />
+        <AssociationConnector Association="AthleteTutorsDBModel.FK_StudentTeams_Teams" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

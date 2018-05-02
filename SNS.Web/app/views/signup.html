@@ -1,0 +1,47 @@
+﻿<form class="form-horizontal" role="form" name="SNSForms.Form" id="SNSForms.Form" ng-show="dataLoaded">
+    <h2 class="form-login-heading">Sign up</h2>
+    <div class="form-group">
+        <label for="_firstname" class="col-sm-2 control-label">First Name</label>
+        <div class="col-sm-10">
+            <input type="text" id="_firstname" name="_firstname" class="form-control" placeholder="First Name" ng-model="userModel.FirstName" validator="required" required-error-message="Required" autofocus>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="_lastname" class="col-sm-2 control-label">Last Name</label>
+        <div class="col-sm-10">
+            <input type="text" id="_lastname" name="_lastname" class="form-control" placeholder="Last Name" ng-model="userModel.LastName" validator="required">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="_grade" class="col-sm-2 control-label">Grade</label>
+        <div class="col-sm-10">
+            <input type="number" min="9" max="12" id="_grade" name="_grade" class="form-control" placeholder="Grade" ng-model="userModel.Grade" validator="required" autofocus>
+        </div>
+    </div>
+    <hr />
+    <div class="form-group">
+        <label for="_email" class="col-sm-2 control-label">EMail</label>
+        <div class="col-sm-10">
+            <input type="email" id="_email" name="_email" class="form-control" placeholder="EMail -- This will be your login ID " ng-model="userModel.UserName" validator="email,remote=checkUserID\doesUserNameExist\User ID already in use.,required">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="_password1" class="col-sm-2 control-label">Password</label>
+        <div class="col-sm-10">
+            <input type="Password" id="_password1" name="_password1" class="form-control" placeholder="Password" ng-model="userModel.Password" validator="required">
+        </div>
+    </div>
+    <div class="form-group">
+
+        <label for="_password2" class="col-sm-2 control-label">Re-enter Password</label>
+        <div class="col-sm-10">
+            <input type="Password" id="_password2" name="_password2" class="form-control" placeholder="Confirm Password" ng-model="userModel.ConfirmPassword" validator="match=userModel.Password">
+        </div>
+    </div>
+    <div layout="row" layout-align="center center" layout-margin hide-xs hide-sm>
+        <md-button class="md-primary md-raised" type="submit" ng-click="signUp()" ng-disabled="!checkFormValid()">
+            Register
+        </md-button>
+    </div>
+</form>

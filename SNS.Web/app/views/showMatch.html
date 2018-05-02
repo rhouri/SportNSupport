@@ -1,0 +1,25 @@
+﻿<md-dialog aria-label="show matches">
+    <form ng-cloak>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>{{title}}</h2>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                <md-list-item class="md-2-line md-long-text" ng-repeat="item in matchStudents">
+                    <div class="md-list-item-text" ">
+                        <h3>{{item.FirstName}} {{item.LastName}}</h3>
+                        <p><b>Teams:</b>({{item.TeamName}})</p>
+                    </div>
+                </md-list-item>
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <span flex></span>
+            <md-button ng-click="answer('OK')">
+                Done
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

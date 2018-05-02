@@ -1,0 +1,55 @@
+﻿<form name="SNSForms.frmRequests">
+    <h2>Select the Sports Teams You belong to:</h2>
+    <div layout-gt-sm="row" layout="column">
+        <div flex="45" style="margin-bottom:10px;">
+
+            <md-toolbar class="md-primary">
+                <div class="md-toolbar-tools">
+                    <h3 class="md-flex">School Teams</h3>
+                    <span flex></span>
+                    <md-button class="md-fab md-mini" aria-label="save Changes" ng-show="SNSForms.frmRequests.$dirty" ng-click="go()">
+                        <md-icon md-font-set="material-icons">done</md-icon>
+                    </md-button>
+                </div>
+            </md-toolbar>
+            <md-content flex layout-padding style="max-height:600px;overflow:auto;">
+
+                <md-list>
+                    <md-list-item class="md-2-line" ng-repeat="item in Teams | filter:notRequested">
+                        <div class="md-list-item-text">
+                            <h3>{{item.TeamName}}</h3>
+                        </div>
+                        <md-checkbox ng-model="item.Requested"></md-checkbox>
+                    </md-list-item>
+                </md-list>
+            </md-content>
+        </div>
+        <div flex></div>
+        <div flex="45" style="margin-bottom:10px;">
+            <md-toolbar class="md-accent">
+                <div class="md-toolbar-tools">
+                    <h2 class="md-flex">Teams I belong To</h2>
+                    <!--<a class="btn btn-sm btn-primary" href="#" ng-show="SNSForms.frmOffers.$dirty" ng-click="saveChanges()">Save</a>-->
+                </div>
+            </md-toolbar>
+            <md-content flex layout-padding style="max-height:600px;overflow:auto;">
+
+                <md-list>
+                    <md-list-item class="md-2-line" ng-repeat="item in Teams | filter:Requested" ">
+                        <div class="md-list-item-text">
+                            <h3>{{item.TeamName}}</h3>
+                        </div>
+                        <md-checkbox ng-model="item.Requested"></md-checkbox>
+                    </md-list-item>
+                </md-list>
+
+            </md-content>
+
+        </div>
+    </div>
+
+</form>
+
+
+
+

@@ -1,0 +1,24 @@
+﻿<h2>Select Your School:</h2>
+<div layout-gt-sm="row" layout="column" layout-align="center center">
+    <div flex="50">
+        <form name="SNSForms.frmRequests">
+            <md-toolbar class="md-primary">
+                <div class="md-toolbar-tools">
+                    <h3 class="md-flex">Schools</h3>
+                    <span flex></span>
+                </div>
+            </md-toolbar>
+            <md-content flex layout-padding style="max-height:600px;overflow:auto;">
+
+                <md-list>
+                    <md-list-item class="md-2-line" ng-repeat="item in schoolList " ng-click="go(item)" >
+                        <div class="md-list-item-text">
+                            <h3>{{item.text}}</h3>
+                        </div>
+                     <!--   <md-checkbox ng-model="item.Selected" onclick="go()"></md-checkbox>-->
+                    </md-list-item>
+                </md-list>
+            </md-content>
+        </form>
+    </div>
+</div>
